@@ -141,11 +141,65 @@ float val_dolar; int opcion;float dolar;float peso;float dolar_peso;float peso_d
 }
 void numerospareseimpares()
 {
-
+int opcion, salir=0,a,b; 
+	cout<<"Programa que de dos opciones,numeros pares del 2 al 100 o numeros impares del 2 al 99"<< endl;
+	cout<<"Escribe 1 la lista de pares o escribe 2 la lista de impares:"<< endl;
+	cin>> opcion;
+	
+	if(opcion==1)
+	{
+		for(short a=2;a<=100;a=a+2)
+		{
+			cout<<"Los numeros pares son:"<<a<<endl;
+		}
+		
+		
+		
+	}
+	else
+	{
+		if(opcion==2)
+		{
+			for(short b=1;b<=99;b=b+2)
+			{
+				cout<<"Los numeros impares son:"<<b<<endl;
+			}
+		}
+		else
+		{
+		cout<<"Error"<< endl;
+		}
+	}
 }
 void positivonegativoneutralwhile()
 {
-
+int n,salir=0;
+	/* code */
+	cout<<"Programa para ver si un numero es menor,mayor o cero"<< endl;
+	cout<<"Escribe el numero:"<< endl;
+	cin>> n;
+	if(n>0)
+	{
+		cout<<"Es positivo"<< endl;
+	}
+	else
+	{
+		if (n<0)
+		{
+			cout<<"Es negativo"<< endl;
+		}
+		else
+		{
+			if(n==0)
+			{
+				cout<<"Es un valor neutro"<< endl;
+			}
+			else
+			{
+				cout<<"Error"<< endl;
+			}
+		}
+	}
 }
 void edadwhile()
 {
@@ -157,11 +211,29 @@ void mayorde3while()
 }
 void cualquiertabla()
 {
-
+int n,tabla,salir=0; 
+		cout<<"Programa que calcule la tabla de cualquier numero "<< endl;
+		cout<<"Introduce el numero deseado:"<< endl;
+		cin>> tabla;
+	
+	
+		for(n=1;n<=10;n=n+1)
+		{
+			cout<<tabla<<"x"<<n<<"="<<tabla*n<<endl;
+		}
 }
 void ganancia()
 {
-
+float inversion,ganancia,monto_total;
+int salir=0;	
+/**/
+		cout<<"Programa que de la ganancia y el monto_total"<< endl;
+		cout<<"Escribe la inversion:"<< endl;
+		cin>> inversion;
+		ganancia=0.06*inversion;
+		cout<<"Su ganancia es:"<<ganancia<< endl;
+		monto_total=ganancia+inversion;
+		cout<<"Su monto total es:"<<monto_total<< endl;
 }
 void estacioneswhile()
 {
@@ -173,7 +245,46 @@ void parimparwhile()
 }
 void perimetro3fig()
 {
-
+int opcion,salir=0;//variables de utilidad
+int lado,perimetro_cuadrado;//var_cuadrado
+int ladot,perimetro_triangulo;//var_triangulo
+float radio,pi=3.14,perimetro_circulo;//var_circulo
+		cout<<"Programa para calcular el perimetro de 3 diferentes figuras"<<endl;
+		cout<<"Presiona 1 para el perimetro del cuadrado\nPresiona 2 para el perimetro del rectangulo\nPresiona 3 para el perimetro del circulo"<<endl;
+		cin>>opcion;
+		system("cls");
+		
+		switch(opcion)
+		{
+			case 1://Cuadrado
+			{
+			  	cout<<"Escribe el valor del lado del cuadrado"<<endl;
+			  	cin>>lado;
+				perimetro_cuadrado=lado*4;
+			  	cout<<"El perimetro del cuadrado es:"<<perimetro_cuadrado<<endl;
+			  	break;
+			}
+			case 2://Triangulo
+			{
+				cout<<"Escribe el valor del lado del triangulo"<<endl;
+				cin>>ladot;
+				perimetro_triangulo=ladot*3;
+			  	cout<<"El perimetro del triangulo es:"<<perimetro_triangulo<<endl;
+				break;	
+			}
+			case 3://Circulo
+			{
+				cout<<"Escribe el valor del radio del circulo"<<endl;
+			  	cin>>radio;
+				perimetro_circulo=radio*(pi*2);
+			  	cout<<"El perimetro del circulo es:"<<perimetro_circulo<<endl;
+			  	break;
+			}
+			default:
+			{
+				cout<<"Opcion no disponible"<<endl;
+			}
+}
 }
 void califbool()
 {
@@ -296,4 +407,3 @@ main()
 		}
 cout<<"---El programa se cerrara---"<<endl;
 }
-	
